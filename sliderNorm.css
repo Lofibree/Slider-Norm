@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(45, 2, 65);
+}
+.main {
+    margin: 50px auto;
+    border: 5px brown solid;
+    height: 400px;
+    width: 900px;
+    overflow: hidden;
+}
+
+.main .slider-box {
+    position: relative;
+    background-size:contain;
+    width: 3000px;
+    left: 0;
+    right: 0;
+    transition: all ease 1s;
+}
+
+.main .slider-box .img {
+    width: 300px;
+    float: left;
+
+}
+.slider-box::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.buttons {
+    padding: 10px;
+    margin: 50px auto;
+    height: fit-content;
+    width: fit-content;
+}
+.buttons .button {
+    display: inline;
+    padding: 10px;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+.buttons .button .cnopka {
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-family: sans-serif;
+}
