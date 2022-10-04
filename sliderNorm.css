@@ -1,49 +1,104 @@
 body {
     background-color: rgb(45, 2, 65);
 }
-.main {
-    margin: 50px auto;
-    border: 5px brown solid;
-    height: 400px;
-    width: 900px;
+
+.container {
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slider {
+    /* border: 5px brown solid; */
+    height: 375px;
+    width: 280px;
     overflow: hidden;
 }
 
-.main .slider-box {
+.slider .slider-box {
     position: relative;
     background-size:contain;
-    width: 3000px;
+    width: 2800px;
     left: 0;
     right: 0;
     transition: all ease 1s;
 }
 
-.main .slider-box .img {
-    width: 300px;
+.slider .slider-box .img {
+    width: 280px;
     float: left;
-
 }
 .slider-box::after {
     content: "";
     display: block;
     clear: both;
 }
-.buttons {
-    padding: 10px;
-    margin: 50px auto;
-    height: fit-content;
-    width: fit-content;
-}
-.buttons .button {
-    display: inline;
-    padding: 10px;
-    position: relative;
-    left: 0;
-    right: 0;
-}
-.buttons .button .cnopka {
-    width: auto;
-    height: auto;
+
+#left, #right {
+    position:relative;
+    bottom: 50%;
     font-size: 20px;
-    font-family: sans-serif;
+    color: brown;
+    background-color: rgba(159, 163, 138, 0.1);
+    border-radius: 5px;
+    padding: 5px;
+}
+#right {
+    float: right;
+}
+#left:hover {
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background: none;
+}
+#right:hover {
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+    background: none;
+}
+.buttons i{
+    margin: 5px;
+}
+#play, #stop {
+    font-size: 30px;
+    color: brown;
+}
+
+#play:hover {
+    cursor: pointer;
+    color: white;
+    transition: 0.2s ease;
+    background: none;
+}
+#stop:hover {
+    cursor: pointer;
+    color: white;
+    transition: 0.2s ease;
+    background: none;
+}
+
+
+.dots {
+    text-align: center;
+    margin: 2%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 2px;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: rgb(59, 59, 59);
 }
